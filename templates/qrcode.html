@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated QR Code</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: auto;
+            width: fit-content;
+            padding: 10px;
+        }
+        img{
+            border: 2px solid black;
+            padding: 2px;
+            margin: auto;
+            width: fit-content;
+        }
+        h1{
+            text-align:center;
+        }
+        a{
+            text-decoration: none;
+        }
+        p{
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 2px;
+            width:fit-content;
+            background-color: e5e5e5;
+            margin: 4px;
+        }
+        p:hover{
+            background-color: lightgrey;
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <h1>Generated QR Code</h1>
+        <img src="{{ url_for('static', filename='qrcode.png') }}" alt="QR Code">
+        <p><a href="{{ url_for('download_qr') }}">Download QR Code</a></p>
+        <p><a href="/">Generate another QR Code</a></p>
+    </div>
+</body>
+</html>

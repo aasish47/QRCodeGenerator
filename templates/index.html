@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: auto;
+            width: fit-content;
+            padding: 10px;
+        }
+        h1{
+            text-align:center;
+        }
+        form{
+            margin-top: 4px;
+        }
+        input{
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <form action="/generate_qr" method="POST">
+            <label for="data">Enter data to encode:</label>
+            <input type="text" name="data" id="data" required> 
+            <input type="submit" value="Generate QR Code">
+        </form>
+    </div>
+</body>
+</html>
+
